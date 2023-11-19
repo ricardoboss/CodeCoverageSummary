@@ -308,17 +308,12 @@ namespace CodeCoverageSummary
         private static string GenerateHealthIndicator(double rate)
         {
             if (rate < lowerThreshold)
-            {
                 return "❌";
-            }
-            else if (rate < upperThreshold)
-            {
-                return "➖";
-            }
-            else
-            {
-                return "✔";
-            }
+
+            if (rate < upperThreshold)
+                return "⚠️";
+
+            return "✅";
         }
 
         private static string GenerateTextOutput(CodeSummary summary, string badgeUrl, bool indicators, bool hideBranchRate, bool hideComplexity)
