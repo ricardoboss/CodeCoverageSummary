@@ -302,7 +302,7 @@ namespace CodeCoverageSummary
             {
                 colour = "success";
             }
-            return $"https://img.shields.io/badge/Code%20Coverage-{summary.LineRate * 100:N0}%25-{colour}?style=flat";
+            return $"https://img.shields.io/badge/Test%20Coverage-{summary.LineRate * 100:N0}%25-{colour}?style=flat";
         }
 
         private static string GenerateHealthIndicator(double rate)
